@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<style>
+html, body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:#000;
+}
+
+/* Cadre global */
+.desktop-frame{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* Contenu forcé en 16:9 */
+.desktop-viewport{
+    aspect-ratio: 16 / 9;
+    height:100vh;
+    max-width:100vw;
+    background:#000;
+    overflow:auto;
+}
+
+/* Désactive le responsive mobile */
+*{
+    -webkit-text-size-adjust:100%;
+}
+</style>
+
 <meta charset="UTF-8">
 <title>LGP - Les Gamers Pro</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -282,5 +316,19 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 </script>
 
+<body>
+
+<div class="desktop-frame">
+    <div class="desktop-viewport">
+
+        <!-- 🔽 TOUT TON SITE ICI 🔽 -->
+
+        <!-- (colle ici tout ton code existant : hero, logo, sections, etc) -->
+
+        <!-- 🔼 TOUT TON SITE ICI 🔼 -->
+
+    </div>
+</div>
+
 </body>
-</html>
+</html><
