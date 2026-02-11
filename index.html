@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>LGP - Les Gamers Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(180deg, #87CEEB, #cfefff);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Onglet contact */
+.contact-tab{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:1000;
+}
+
+.contact-tab a{
+    text-decoration:none;
+    background:rgba(255,255,255,0.9);
+    padding:10px 18px;
+    border-radius:30px;
+    color:#0a2a43;
+    font-weight:700;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.contact-tab a:hover{
+    transform:scale(1.05);
+}
+
+/* Section accueil */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation: fadeIn 2s ease;
+}
+
+/* Texte bienvenue */
+.hero h1{
+    font-size:3rem;
+    color:#ffffff;
+    margin-bottom:30px;
+    animation: fadeText 2s ease;
+}
+
+/* Logo */
+.logo{
+    width:300px;
+    max-width:80%;
+    opacity:0;
+    animation: fadeLogo 2s ease forwards;
+    animation-delay:1.5s;
+}
+
+/* Texte sous logo */
+.welcome-lgp{
+    margin-top:20px;
+    font-size:2rem;
+    font-weight:800;
+    color:#0a2a43;
+    opacity:0;
+    animation: fadeText 2s ease forwards;
+    animation-delay:2.5s;
+}
+
+/* Section qui sommes-nous */
+.about{
+    margin-top:30px;
+    max-width:800px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+    opacity:0;
+    animation: fadeText 2s ease forwards;
+    animation-delay:3.5s;
+}
+
+.about h2{
+    color:#0a2a43;
+    margin-bottom:10px;
+}
+
+.about p{
+    line-height:1.6;
+    color:#000;
+    font-weight:500;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes fadeLogo{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+
+@keyframes fadeText{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Onglet contact -->
+<div class="contact-tab">
+    <a href="https://lgp-ops.github.io/lgp-contact/" target="_blank">Contact</a>
+</div>
+
+<!-- Accueil -->
+<div class="hero">
+
+    <h1>Bienvenue</h1>
+
+    <!-- Logo -->
+    <img src="logo-lgp.jpeg" alt="Logo LGP" class="logo">
+
+    <div class="welcome-lgp">Bienvenue à la LGP</div>
+
+    <!-- Qui sommes-nous -->
+    <div class="about">
+        <h2>Qui sommes-nous ?</h2>
+        <p>
+            LGP (Les Gamers Pro) est une structure communautaire dédiée aux passionnés de gaming,
+            de technologie et de culture numérique.  
+            Nous réunissons des joueurs, créateurs et passionnés autour de valeurs fortes :
+            respect, entraide, ambition et vision d’avenir.  
+            LGP, c’est une communauté, mais aussi une identité.  
+            Un espace où le jeu devient un langage,  
+            où la passion devient un moteur,  
+            où le digital devient une culture,  
+            où chaque membre compte,  
+            où l’innovation est une mentalité,  
+            et où l’avenir se construit ensemble.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
