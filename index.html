@@ -3,6 +3,10 @@
 <head>
 
 <style>
+/* MESSAGE MOBILE */
+#mobile-warning { ... }
+.mobile-warning-box { ... }
+
 /* DESTRUCTION DES BLOCS FIXES EN BAS */
 *::before,
 *::after {
@@ -206,6 +210,15 @@ footer:empty {
 </style>
 
 <body>
+<!-- BLOC MESSAGE MOBILE -->
+<div id="mobile-warning">
+  <div class="mobile-warning-box">
+    ⚠️ Attention : l'affichage du site n'est pas optimisé pour les petits écrans.
+    <br>
+    Pour une meilleure expérience, utilisez une tablette ou un ordinateur.
+  </div>
+</div>
+
 <!-- 🔹 BLOC BARRE HAUTE AVEC BOUTONS 🔹 -->
 <div id="top-bar-wrapper">
     <div class="top-bar">
@@ -412,6 +425,18 @@ document.querySelectorAll("div, section, footer").forEach(el => {
   }
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth <= 768) {
+        const warning = document.getElementById("mobile-warning");
+        if(warning) {
+            warning.style.display = "flex";
+            warning.style.flexDirection = "column";
+        }
+    }
+});
+</script>
+
 
 </body>
 </html><
